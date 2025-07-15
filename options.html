@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Context-Aware Notes Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { width: 400px; }
+    </style>
+</head>
+<body class="p-6 bg-orange-50">
+    <div class="space-y-4">
+        <h1 class="text-2xl font-bold text-gray-800">Settings</h1>
+        <div>
+            <label for="apiKey" class="block text-sm font-medium text-gray-700">Gemini API Key</label>
+            <div class="mt-1">
+                <input type="password" id="apiKey" class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Enter your API key">
+            </div>
+            <p class="mt-2 text-xs text-gray-500">Your key is stored securely and never leaves your browser.</p>
+        </div>
+        <div class="flex items-center">
+             <button id="save" class="px-4 py-2 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Save Key</button>
+             <span id="status" class="ml-4 text-sm font-medium"></span>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

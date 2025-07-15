@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Context-Aware Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="w-80 p-4" style="background-color: #f9e1a8;">
+
+
+    <div id="folder-view">
+        <h1 class="text-xl font-bold mb-4">Folders</h1>
+        <div id="folder-container" class="space-y-2">
+            </div>
+    </div>
+
+    <div id="notes-view" class="hidden">
+        <div class="flex items-center mb-4">
+            <button id="back-to-folders" class="text-blue-500 mr-2">&larr; Back</button>
+            <h1 id="notes-view-title" class="text-xl font-bold"></h1>
+        </div>
+        <div id="notes-list" class="space-y-4">
+            </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

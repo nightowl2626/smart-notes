@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "name": "Context-Aware Notes",
+    "version": "1.0",
+    "description": "Take notes, tag them, and have them resurface contextually.",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "<all_urls>",
+      "https://generativelanguage.googleapis.com/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon16.png",
+      "128": "icon16.png"
+    },
+
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "content.js"
+        ],
+        "css": [
+          "styles.css"
+        ]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "popup.html"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
+}
